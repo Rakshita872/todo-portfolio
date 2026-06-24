@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title> MY TODO APP</title>
+
+<!-- Our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+      <h1> My Todo List</h1>
+      <p>Stay focused. Ship things</p>
+    </header>
+
+    <!-- Main App -->
+    <div class='app'>
+
+      <!-- Input Row -->
+      <div class="input-row">
+        <input type='text' id='taskInput' placeholder="Add a new task...." max="120" />
+        <button class="btn-add" onclick="addTask()">ADD</button>
+      </div>
+
+      <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+      <button class="filter-btn" onclick="setFilter('active',this)">Active</button>
+      <button class="filter-btn" onclick="setFilter('done',this)">Done</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-wrap">
+      <div class="progress-bar" id='progressBar' style='width:0%'></div>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="stats">
+      <span id='statsText'>0 Tasks</span>
+      <button class="clear-btn" onclick="clearDone()">Clear Completed</button>
+    </div>
+
+    <!-- Todo List -->
+    <div class="todo-list" id='todoList'></div>
+
+    </div>
+
+    <!-- JS File -->
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
